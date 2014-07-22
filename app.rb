@@ -61,3 +61,8 @@ puts($counter)
 
 #TO fix this ruby gives us an object called a mutex.
 #Mutex prevents 2 threads from entering its block simultaneously. It doesn't guarentee order because whoever is there first will take over. But at least it won't change the coutner between the time when you reset the counter and changes happen to it.
+
+# If there is any global state then we have to be careful about coordinating access to the state. Classes can be thread safe or thread unsafe.
+
+# Thread-safe : Clall methods from different threads and not worry about race conditions
+# Thread-unsafe: Calling methods from different threads may corrupt other
